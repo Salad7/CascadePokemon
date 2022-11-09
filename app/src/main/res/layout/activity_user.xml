@@ -18,7 +18,7 @@
             android:layout_height="match_parent">
 
             <EditText
-                android:id="@+id/editTextTextPersonName2"
+                android:id="@+id/firstname_et"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -32,55 +32,55 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName3"
+                android:id="@+id/lastname_et"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:ems="10"
                 android:hint="Last Name"
                 android:inputType="textPersonName"
-                app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
-                app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+                app:layout_constraintEnd_toEndOf="@+id/firstname_et"
+                app:layout_constraintStart_toStartOf="@+id/firstname_et"
+                app:layout_constraintTop_toBottomOf="@+id/firstname_et" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName4"
+                android:id="@+id/account_et"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:ems="10"
                 android:hint="Account Number"
                 android:inputType="textPersonName"
-                app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
-                app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+                app:layout_constraintEnd_toEndOf="@+id/firstname_et"
+                app:layout_constraintStart_toStartOf="@+id/firstname_et"
+                app:layout_constraintTop_toBottomOf="@+id/lastname_et" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName5"
+                android:id="@+id/balance_et"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:ems="10"
                 android:hint="Balance"
                 android:inputType="numberDecimal"
-                app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
-                app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
+                app:layout_constraintEnd_toEndOf="@+id/firstname_et"
+                app:layout_constraintStart_toStartOf="@+id/firstname_et"
+                app:layout_constraintTop_toBottomOf="@+id/account_et" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName6"
+                android:id="@+id/email_et"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:ems="10"
                 android:hint="Email"
                 android:inputType="textPersonName"
-                app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
-                app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5" />
+                app:layout_constraintEnd_toEndOf="@+id/firstname_et"
+                app:layout_constraintStart_toStartOf="@+id/firstname_et"
+                app:layout_constraintTop_toBottomOf="@+id/balance_et" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/create_btn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
