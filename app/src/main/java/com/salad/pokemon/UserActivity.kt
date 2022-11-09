@@ -15,12 +15,17 @@ class UserActivity : AppCompatActivity() {
     lateinit var viewModel :UserActivityViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        var sharedPrefs = getSharedPreferences("pokemonPrefs", MODE_PRIVATE)
         binding = ActivityUserBinding.bind(layoutInflater.inflate(R.layout.activity_user,null,false))
-
+        if(sharedPrefs.contains("first")) {
+            //User already exists, go to main activity
+            var intent = Intent(this@UserActivity,MainActivity::class.java)
+            startActivity(intent)
+        }
         binding.apply {
             createBtn.setOnClickListener {
                 if(!areInputsEmpty() and isBalanceFloat()){
-                    var sharedPrefs = getSharedPreferences("pokemonPrefs", MODE_PRIVATE)
+                    sharedPrefs = getSharedPreferences("pokemonPrefs", MODE_PRIVATE)
                     var edits = sharedPrefs.edit()
                     edits.putString("first",binding.firstnameEt.text.toString())
                     edits.putString("last",binding.lastnameEt.text.toString())
@@ -28,13 +33,14 @@ class UserActivity : AppCompatActivity() {
                     var balanceToFloat = binding.balanceEt.text.toString().toFloatOrNull()!!
                     edits.putFloat("balance",balanceToFloat)
                     edits.putString("email",binding.firstnameEt.text.toString())
-                    edits.commit()
+                    edits.apply()
                     var user = User(binding.firstnameEt.text.toString(),binding.lastnameEt.text.toString(),binding.accountEt.text.toString(),balanceToFloat,binding.firstnameEt.text.toString())
-                    var intent = Intent(this@UserActivity,UserActivity::class.java)
+                    var intent = Intent(this@UserActivity,MainActivity::class.java)
                     startActivity(intent)
                 }
             }
         }
+        setContentView(binding.root)
     }
 
     fun isBalanceFloat() : Boolean
