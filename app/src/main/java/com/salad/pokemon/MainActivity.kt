@@ -80,6 +80,7 @@ class MainActivity : AppCompatActivity() {
                         catch (ex :Exception){
                             Toast.makeText(this@MainActivity,"Error running search",Toast.LENGTH_SHORT).show()
                             Toast.makeText(this@MainActivity,ex.printStackTrace().toString(),Toast.LENGTH_SHORT).show()
+                            requestPb.visibility = View.INVISIBLE
                             ex.printStackTrace()
                         }
                     }
