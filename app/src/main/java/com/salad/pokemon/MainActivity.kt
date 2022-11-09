@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
                             binding.requestPb.visibility = View.VISIBLE
                             viewModel.searchQuery(searchQuery)
                             viewModel.immutableResults.collect() {
-                                binding.requestPb.visibility = View.VISIBLE
+                                binding.requestPb.visibility = View.INVISIBLE
                                 var value = it.get(0).base_experience
                                 var balance = sharedPref.getFloat("balance",0.0f)
                                 if(balance > value){
